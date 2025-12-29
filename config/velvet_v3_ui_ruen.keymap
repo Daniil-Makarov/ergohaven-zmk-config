@@ -48,6 +48,16 @@
             flavor = "tap-preferred";
         };
 
+        mok: mok {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOK";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
         zip_auto_mouse: zip_auto_mouse {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
@@ -133,10 +143,10 @@
 
         en {
             bindings = <
-&kp TAB    &kp Q            &kp W            &kp E         &kp R              &kp T                               &kp Y  &kp U               &kp I          &kp O             &kp P                &kp NUBS
-&layer_ru  &hrm LEFT_GUI A  &hrm LEFT_ALT S  &hrm LCTRL D  &hrm LEFT_SHIFT F  &kp G                               &kp H  &hrm RIGHT_SHIFT J  &hrm RCTRL K   &hrm RIGHT_ALT L  &hrm RIGHT_GUI SEMI  &kp SQT
-&kp DQT    &kp Z            &kp X            &kp C         &kp V              &kp B                               &kp N  &kp M               &kp LESS_THAN  &kp GREATER_THAN  &kp FSLH             &kp DELETE
-                            &kp EXCL         &kp QUESTION  &kp ESC            &mo 2  &kp RETURN    &kp BACKSPACE  &mo 4  &none               &kp COMMA      &kp DOT
+&kp TAB    &kp Q            &kp W            &kp E         &kp R              &kp T                                      &kp Y         &kp U               &kp I          &kp O             &kp P                &kp NUBS
+&layer_ru  &hrm LEFT_GUI A  &hrm LEFT_ALT S  &hrm LCTRL D  &hrm LEFT_SHIFT F  &kp G                                      &kp H         &hrm RIGHT_SHIFT J  &hrm RCTRL K   &hrm RIGHT_ALT L  &hrm RIGHT_GUI SEMI  &kp SQT
+&kp DQT    &kp Z            &kp X            &kp C         &kp V              &kp B                                      &kp N         &kp M               &kp LESS_THAN  &kp GREATER_THAN  &kp FSLH             &kp DELETE
+                            &kp EXCL         &kp QUESTION  &kp ESC            &mok 2 SPACE  &kp BACKSPACE    &kp RETURN  &mok 4 SPACE  &none               &kp COMMA      &kp DOT
             >;
 
             display-name = "Base";
@@ -145,10 +155,10 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp TAB     &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE             &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_KA             &kp RU_CYRILLIC_IE                              &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA          &kp RU_CYRILLIC_ZE              &kp RU_CYRILLIC_HA
-&layer_en   &hrm LEFT_GUI RU_CYRILLIC_EF  &hrm LEFT_ALT RU_CYRILLIC_YERU  &hrm LCTRL RU_CYRILLIC_VE  &hrm LEFT_SHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                              &kp RU_CYRILLIC_ER  &hrm RIGHT_SHIFT RU_CYRILLIC_O  &hrm RCTRL RU_CYRILLIC_EL  &hrm RIGHT_ALT RU_CYRILLIC_DE  &hrm RIGHT_GUI RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp RU_DQT  &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE             &kp RU_CYRILLIC_ES         &kp RU_CYRILLIC_EM             &kp RU_CYRILLIC_I                               &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE         &kp RU_CYRILLIC_YU             &kp RU_CYRILLIC_HARD_SIGN       &kp DELETE
-                                          &kp RU_EXCL                     &kp RU_QUESTION            &kp ESC                        &mo 2               &kp ENTER    &kp BACKSPACE  &mo 5               &none                           &kp RU_COMMA               &kp RU_DOT
+&kp TAB     &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE             &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_KA             &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA          &kp RU_CYRILLIC_ZE              &kp RU_CYRILLIC_HA
+&layer_en   &hrm LEFT_GUI RU_CYRILLIC_EF  &hrm LEFT_ALT RU_CYRILLIC_YERU  &hrm LCTRL RU_CYRILLIC_VE  &hrm LEFT_SHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &hrm RIGHT_SHIFT RU_CYRILLIC_O  &hrm RCTRL RU_CYRILLIC_EL  &hrm RIGHT_ALT RU_CYRILLIC_DE  &hrm RIGHT_GUI RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp RU_DQT  &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE             &kp RU_CYRILLIC_ES         &kp RU_CYRILLIC_EM             &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE         &kp RU_CYRILLIC_YU             &kp RU_CYRILLIC_HARD_SIGN       &kp DELETE
+                                          &kp RU_EXCL                     &kp RU_QUESTION            &kp ESC                        &mok 2 SPACE        &kp BACKSPACE    &kp RETURN  &mok 5 SPACE        &none                           &kp RU_COMMA               &kp RU_DOT
             >;
         };
 
