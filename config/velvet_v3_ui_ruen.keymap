@@ -66,21 +66,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        cmben {
-            bindings = <&layer_en>;
-            key-positions = <3 4>;
-            layers = <1>;
-        };
-
-        cmbru {
-            bindings = <&layer_ru>;
-            key-positions = <3 4>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_ru: to_ru {
@@ -143,9 +129,9 @@
 
         en {
             bindings = <
-&kp TAB    &kp Q            &kp W         &kp E         &kp R              &kp T                                      &kp Y         &kp U               &kp I          &kp O             &kp P                &kp NUBS
-&layer_ru  &hrm LEFT_GUI A  &hrm LCTRL S  &hrm LALT D   &hrm LEFT_SHIFT F  &kp G                                      &kp H         &hrm RIGHT_SHIFT J  &hrm RALT K    &hrm RCTRL L      &hrm RIGHT_GUI SEMI  &kp SQT
-&kp DQT    &kp Z            &kp X         &kp C         &kp V              &kp B                                      &kp N         &kp M               &kp LESS_THAN  &kp GREATER_THAN  &kp FSLH             &kp DELETE
+&kp TAB    &kp Q            &kp W         &kp E         &kp R              &kp T                                      &kp Y         &kp U               &kp I          &kp O             &kp P     &kp NUBS
+&layer_ru  &hrm LEFT_GUI A  &hrm LCTRL S  &hrm LALT D   &hrm LEFT_SHIFT F  &kp G                                      &kp H         &hrm RIGHT_SHIFT J  &hrm RALT K    &hrm RCTRL L      &kp SEMI  &kp SQT
+&kp DQT    &kp Z            &kp X         &kp C         &kp V              &kp B                                      &kp N         &kp M               &kp LESS_THAN  &kp GREATER_THAN  &kp FSLH  &kp DELETE
                             &kp ESC       &kp QUESTION  &mo 6              &mok 2 SPACE  &kp BACKSPACE    &kp RETURN  &mok 3 SPACE  &trans              &kp COMMA      &kp DOT
             >;
 
@@ -155,17 +141,17 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp TAB     &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA             &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE              &kp RU_CYRILLIC_HA
-&layer_en   &hrm LEFT_GUI RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LEFT_SHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &hrm RIGHT_SHIFT RU_CYRILLIC_O  &hrm RALT RU_CYRILLIC_EL  &hrm RCTRL RU_CYRILLIC_DE  &hrm RIGHT_GUI RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp RU_DQT  &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE          &kp RU_CYRILLIC_ES        &kp RU_CYRILLIC_EM             &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE        &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_HARD_SIGN       &kp DELETE
+&kp TAB     &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA             &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA
+&layer_en   &hrm LEFT_GUI RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LEFT_SHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &hrm RIGHT_SHIFT RU_CYRILLIC_O  &hrm RALT RU_CYRILLIC_EL  &hrm RCTRL RU_CYRILLIC_DE  &kp RU_CYRILLIC_ZHE        &kp RU_CYRILLIC_E
+&kp RU_DQT  &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE          &kp RU_CYRILLIC_ES        &kp RU_CYRILLIC_EM             &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE        &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_HARD_SIGN  &kp DELETE
                                           &kp ESC                      &kp RU_QUESTION           &mo 6                          &mok 2 SPACE        &kp BACKSPACE    &kp RETURN  &mok 4 SPACE        &trans                          &kp RU_COMMA              &kp RU_DOT
             >;
         };
 
         nav {
             bindings = <
-&kp INS             &kp LC(LS(LEFT_ARROW))  &kp PAGE_DOWN    &kp UP          &kp PAGE_UP      &kp LC(LS(RIGHT_ARROW))                    &kp CLEAR        &kp N7         &kp N8     &kp N9   &kp EQUAL  &kp CAPSLOCK
-&kp LA(UP_ARROW)    &kp LC(LEFT_ARROW)      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT_ARROW)                        &kp KP_DIVIDE    &kp N4         &kp N5     &kp N6   &kp MINUS  &trans
+&kp LC(X)           &kp LC(LS(LEFT_ARROW))  &kp PAGE_DOWN    &kp UP          &kp PAGE_UP      &kp LC(LS(RIGHT_ARROW))                    &kp CLEAR        &kp N7         &kp N8     &kp N9   &kp EQUAL  &kp CAPSLOCK
+&kp LA(UP_ARROW)    &kp LC(LEFT_ARROW)      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT_ARROW)                        &kp KP_DIVIDE    &kp N4         &kp N5     &kp N6   &kp MINUS  &kp INSERT
 &kp LA(DOWN_ARROW)  &kp LA(LEFT_ARROW)      &kp HOME         &kp LGUI        &kp END          &kp LA(RIGHT_ARROW)                        &kp KP_MULTIPLY  &kp N1         &kp N2     &kp N3   &kp PLUS   &kp DELETE
                                             &kp LC(LS(TAB))  &kp LC(TAB)     &trans           &trans                   &trans    &kp N0  &mo 5            &kp BACKSPACE  &en COMMA  &en DOT
             >;
@@ -198,7 +184,7 @@
             bindings = <
 &bootloader  &none  &kp F9  &kp F10  &kp F11  &kp F12                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4          &bt BT_CLR
 &none        &none  &kp F5  &kp F6   &kp F7   &kp F8                   &out OUT_BLE  &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &kp C_BRIGHTNESS_INC  &studio_unlock
-&none        &none  &kp F1  &kp F2   &kp F3   &kp F4                   &out OUT_USB  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_BRIGHTNESS_DEC  &none
+&none        &none  &kp F1  &kp F2   &kp F3   &kp F4                   &out OUT_USB  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_BRIGHTNESS_DEC  &tog 9
                     &trans  &trans   &none    &none    &none    &none  &none         &none         &trans            &trans
             >;
 
@@ -236,6 +222,24 @@
             >;
 
             display-name = "Sniper";
+        };
+
+        Gaming {
+            bindings = <
+&kp H  &kp TAB         &kp Q    &kp W  &kp E   &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
+&kp T  &kp LEFT_SHIFT  &kp A    &kp S  &kp D   &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
+&kp B  &kp LCTRL       &kp Z    &kp X  &kp C   &kp V                              &trans  &trans  &trans  &trans  &trans  &tog 9
+                       &kp TAB  &kp G  &mo 10  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        GamingNumbers {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp N0  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
