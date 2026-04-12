@@ -129,10 +129,10 @@
 
         en {
             bindings = <
-&kp TAB    &kp Q            &kp W         &kp E         &kp R              &kp T                                      &kp Y         &kp U               &kp I          &kp O             &kp P                &kp NUBS
-&layer_ru  &hrm LEFT_GUI A  &hrm LCTRL S  &hrm LALT D   &hrm LEFT_SHIFT F  &kp G                                      &kp H         &hrm RIGHT_SHIFT J  &hrm RALT K    &hrm RCTRL L      &hrm RIGHT_GUI SEMI  &kp SQT
-&kp DQT    &kp Z            &kp X         &kp C         &kp V              &kp B                                      &kp N         &kp M               &kp LESS_THAN  &kp GREATER_THAN  &kp FSLH             &kp DELETE
-                            &kp ESC       &kp QUESTION  &mo 6              &mok 2 SPACE  &kp BACKSPACE    &kp RETURN  &mok 3 SPACE  &trans              &kp COMMA      &kp DOT
+&kp TAB    &kp Q         &kp W        &kp E         &kp R              &kp T                                      &kp Y         &kp U               &kp I          &kp O             &kp P            &kp NUBS
+&layer_ru  &hrm LCTRL A  &hrm LALT S  &hrm LGUI D   &hrm LEFT_SHIFT F  &kp G                                      &kp H         &hrm RIGHT_SHIFT J  &hrm RGUI K    &hrm RALT L       &hrm RCTRL SEMI  &kp SQT
+&kp DQT    &kp Z         &kp X        &kp C         &kp V              &kp B                                      &kp N         &kp M               &kp LESS_THAN  &kp GREATER_THAN  &kp FSLH         &kp DELETE
+                         &kp ESC      &kp QUESTION  &mo 6              &mok 2 SPACE  &kp BACKSPACE    &kp RETURN  &mok 3 SPACE  &trans              &kp COMMA      &kp DOT
             >;
 
             display-name = "En";
@@ -141,10 +141,10 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp TAB     &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA             &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE              &kp RU_CYRILLIC_HA
-&layer_en   &hrm LEFT_GUI RU_CYRILLIC_EF  &hrm LCTRL RU_CYRILLIC_YERU  &hrm LALT RU_CYRILLIC_VE  &hrm LEFT_SHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &hrm RIGHT_SHIFT RU_CYRILLIC_O  &hrm RALT RU_CYRILLIC_EL  &hrm RCTRL RU_CYRILLIC_DE  &hrm RIGHT_GUI RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp RU_DQT  &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE          &kp RU_CYRILLIC_ES        &kp RU_CYRILLIC_EM             &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE        &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_HARD_SIGN       &kp DELETE
-                                          &kp ESC                      &kp RU_QUESTION           &mo 6                          &mok 2 SPACE        &kp BACKSPACE    &kp RETURN  &mok 4 SPACE        &trans                          &kp RU_COMMA              &kp RU_DOT
+&kp TAB     &kp RU_CYRILLIC_SHORT_I    &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA             &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_SHCHA     &kp RU_CYRILLIC_ZE          &kp RU_CYRILLIC_HA
+&layer_en   &hrm LCTRL RU_CYRILLIC_EF  &hrm LALT RU_CYRILLIC_YERU  &hrm LGUI RU_CYRILLIC_VE  &hrm LEFT_SHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &hrm RIGHT_SHIFT RU_CYRILLIC_O  &hrm RGUI RU_CYRILLIC_EL  &hrm RALT RU_CYRILLIC_DE  &hrm RCTRL RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp RU_DQT  &kp RU_CYRILLIC_YA         &kp RU_CYRILLIC_CHE         &kp RU_CYRILLIC_ES        &kp RU_CYRILLIC_EM             &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE        &kp RU_CYRILLIC_YU        &kp RU_CYRILLIC_HARD_SIGN   &kp DELETE
+                                       &kp ESC                     &kp RU_QUESTION           &mo 6                          &mok 2 SPACE        &kp BACKSPACE    &kp RETURN  &mok 4 SPACE        &trans                          &kp RU_COMMA              &kp RU_DOT
             >;
         };
 
