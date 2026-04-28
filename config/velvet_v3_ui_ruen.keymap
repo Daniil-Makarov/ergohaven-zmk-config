@@ -61,7 +61,7 @@
         modC: modC {
             compatible = "zmk,behavior-mod-morph";
             label = "MODC";
-            bindings = <&kp RU_CYRILLIC_ES>, <&kp C>;
+            bindings = <&kp RU_CYRILLIC_ES>, <&en C>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
@@ -71,7 +71,7 @@
         modV: modV {
             compatible = "zmk,behavior-mod-morph";
             label = "MODV";
-            bindings = <&kp RU_CYRILLIC_EM>, <&kp V>;
+            bindings = <&kp RU_CYRILLIC_EM>, <&en V>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
@@ -193,10 +193,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &kp RU_CYRILLIC_IO  &en LT            &en CARET     &en GT       &en GRAVE                     &trans    &en LBKT     &kp UNDER    &en RBKT  &trans    &trans
-&trans  &kp RU_NUMERO       &kp LPAR          &kp RU_COLON  &kp RPAR     &en AMPS                      &en HASH  &en LBRC     &kp RU_SEMI  &en RBRC  &kp EXCL  &trans
-&trans  &trans              &kp RU_BACKSLASH  &en PIPE      &kp RU_FSLH  &trans                        &trans    &kp PERCENT  &en TILDE    &en DLLR  &trans    &trans
-                            &trans            &trans        &en AT       &mo 5      &en SQT    &trans  &trans    &trans       &trans       &trans
+&trans  &kp RU_CYRILLIC_IO  &en LT         &en CARET     &en GT    &en GRAVE                     &trans    &en LBKT     &kp UNDER    &en RBKT  &trans    &trans
+&trans  &kp RU_NUMERO       &kp LPAR       &kp RU_COLON  &kp RPAR  &en AMPS                      &en HASH  &en LBRC     &kp RU_SEMI  &en RBRC  &kp EXCL  &trans
+&trans  &trans              &kp BACKSLASH  &en PIPE      &kp FSLH  &trans                        &trans    &kp PERCENT  &en TILDE    &en DLLR  &trans    &trans
+                            &trans         &trans        &en AT    &mo 5      &en SQT    &trans  &trans    &trans       &trans       &trans
             >;
         };
 
