@@ -61,21 +61,19 @@
         modC: modC {
             compatible = "zmk,behavior-mod-morph";
             label = "MODC";
-            bindings = <&kp RU_CYRILLIC_ES>, <&en C>;
+            bindings = <&kp RU_CYRILLIC_ES>, <&en LC(C)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
-            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
 
         modV: modV {
             compatible = "zmk,behavior-mod-morph";
             label = "MODV";
-            bindings = <&kp RU_CYRILLIC_EM>, <&en V>;
+            bindings = <&kp RU_CYRILLIC_EM>, <&kp LC(V)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
-            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
 
         zip_auto_mouse: zip_auto_mouse {
