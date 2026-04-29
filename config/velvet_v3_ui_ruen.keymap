@@ -36,7 +36,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <0>;
         };
 
         scroll: scroll {
@@ -57,7 +57,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <0>;
         };
 
         modC: modC {
@@ -87,7 +87,7 @@
             flavor = "balanced";
             bindings = <&lctrlru>, <&kp>;
 
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <0>;
         };
 
         hrmlaltru: hrmlaltru {
@@ -98,7 +98,7 @@
             flavor = "balanced";
             bindings = <&laltru>, <&kp>;
 
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <0>;
         };
 
         hrmlguiru: hrmlguiru {
@@ -109,7 +109,7 @@
             flavor = "balanced";
             bindings = <&lguiru>, <&kp>;
 
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <0>;
         };
 
         hrmlshiftru: hrmlshiftru {
@@ -120,7 +120,7 @@
             flavor = "balanced";
             bindings = <&lshiftru>, <&kp>;
 
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <0>;
         };
 
         zip_auto_mouse: zip_auto_mouse {
