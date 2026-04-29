@@ -34,8 +34,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
+            require-prior-idle-ms = <125>;
         };
 
         scroll: scroll {
@@ -54,8 +55,9 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
+            require-prior-idle-ms = <125>;
         };
 
         modC: modC {
@@ -77,13 +79,48 @@
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
 
-        hrmru: hrmru {
+        hrmlctrlru: hrmlctrlru {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRMRU";
+            label = "HRMLCTRLRU";
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
-            bindings = <&modru>, <&kp>;
+            bindings = <&lctrlru>, <&kp>;
+
+            require-prior-idle-ms = <125>;
+        };
+
+        hrmlaltru: hrmlaltru {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRMLALTRU";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            bindings = <&laltru>, <&kp>;
+
+            require-prior-idle-ms = <125>;
+        };
+
+        hrmlguiru: hrmlguiru {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRMLGUIRU";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            bindings = <&lguiru>, <&kp>;
+
+            require-prior-idle-ms = <125>;
+        };
+
+        hrmlshiftru: hrmlshiftru {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRMLSHIFTRU";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            bindings = <&lshiftru>, <&kp>;
+
+            require-prior-idle-ms = <125>;
         };
 
         zip_auto_mouse: zip_auto_mouse {
@@ -151,7 +188,7 @@
             tap-ms = <30>;
         };
 
-        modru: modru {
+        lctrlru: modru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -165,6 +202,54 @@
                 <&to_ru>;
 
             label = "MODRU";
+        };
+
+        laltru: laltru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&to_en>,
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&to_ru>;
+
+            label = "LALTRU";
+        };
+
+        lguiru: lguiru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&to_en>,
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&to_ru>;
+
+            label = "LGUIRU";
+        };
+
+        lshiftru: lshiftru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&to_en>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&to_ru>;
+
+            label = "LSHIFTRU";
         };
     };
 
@@ -185,10 +270,10 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp TAB     &kp RU_CYRILLIC_SHORT_I             &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_U         &kp RU_CYRILLIC_KA             &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA       &kp RU_CYRILLIC_SHCHA     &kp RU_CYRILLIC_ZE          &kp RU_CYRILLIC_HA
-&layer_en   &hrmru LEFT_CONTROL RU_CYRILLIC_EF  &hrm LALT RU_CYRILLIC_YERU  &hrm LGUI RU_CYRILLIC_VE  &hrm LEFT_SHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &hrm RIGHT_SHIFT RU_CYRILLIC_O  &hrm RGUI RU_CYRILLIC_EL  &hrm RALT RU_CYRILLIC_DE  &hrm RCTRL RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp RU_DQT  &kp RU_CYRILLIC_YA                  &kp RU_CYRILLIC_CHE         &modC                     &modV                          &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE        &kp RU_CYRILLIC_YU        &kp RU_CYRILLIC_HARD_SIGN   &kp DELETE
-                                                &kp ESC                     &kp RU_QUESTION           &mo 6                          &mok 2 SPACE        &kp BACKSPACE    &kp RETURN  &mok 4 SPACE        &trans                          &kp RU_COMMA              &kp RU_DOT
+&kp TAB     &kp RU_CYRILLIC_SHORT_I                  &kp RU_CYRILLIC_TSE            &kp RU_CYRILLIC_U            &kp RU_CYRILLIC_KA            &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE           &kp RU_CYRILLIC_SHA          &kp RU_CYRILLIC_SHCHA        &kp RU_CYRILLIC_ZE             &kp RU_CYRILLIC_HA
+&layer_en   &hrmlctrlru LEFT_CONTROL RU_CYRILLIC_EF  &hrmlaltru 0 RU_CYRILLIC_YERU  &hrmlguiru 0 RU_CYRILLIC_VE  &hrmlshiftru 0 RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &hrmlshiftru 0 RU_CYRILLIC_O  &hrmlguiru 0 RU_CYRILLIC_EL  &hrmlaltru 0 RU_CYRILLIC_DE  &hrmlctrlru 0 RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp RU_DQT  &kp RU_CYRILLIC_YA                       &kp RU_CYRILLIC_CHE            &kp RU_CYRILLIC_ES           &kp RU_CYRILLIC_EM            &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN     &kp RU_CYRILLIC_BE           &kp RU_CYRILLIC_YU           &kp RU_CYRILLIC_HARD_SIGN      &kp DELETE
+                                                     &kp ESC                        &kp RU_QUESTION              &mo 6                         &mok 2 SPACE        &kp BACKSPACE    &kp RETURN  &mok 4 SPACE        &trans                        &kp RU_COMMA                 &kp RU_DOT
             >;
         };
 
@@ -268,7 +353,7 @@
             display-name = "Sniper";
         };
 
-        Gaming {
+        game {
             bindings = <
 &kp H  &kp TAB         &kp Q    &kp W  &kp E   &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
 &kp T  &kp LEFT_SHIFT  &kp A    &kp S  &kp D   &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
@@ -277,7 +362,7 @@
             >;
         };
 
-        GamingNumbers {
+        game_hidden {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                    &trans  &trans  &trans  &trans  &trans  &trans
 &kp N0  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &trans  &trans  &trans  &trans  &trans  &trans
