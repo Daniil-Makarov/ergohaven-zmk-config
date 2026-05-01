@@ -270,18 +270,18 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp TAB     &kp RU_CYRILLIC_SHORT_I                  &kp RU_CYRILLIC_TSE            &kp RU_CYRILLIC_U            &kp RU_CYRILLIC_KA             &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA          &kp RU_CYRILLIC_SHCHA        &kp RU_CYRILLIC_ZE             &kp RU_CYRILLIC_HA
-&layer_en   &hrmlctrlru LEFT_CONTROL RU_CYRILLIC_EF  &hrmlaltru 0 RU_CYRILLIC_YERU  &hrmlguiru 0 RU_CYRILLIC_VE  &hrm LEFT_SHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &hrm RIGHT_SHIFT RU_CYRILLIC_O  &hrmlguiru 0 RU_CYRILLIC_EL  &hrmlaltru 0 RU_CYRILLIC_DE  &hrmlctrlru 0 RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp RU_DQT  &kp RU_CYRILLIC_YA                       &kp RU_CYRILLIC_CHE            &kp RU_CYRILLIC_ES           &kp RU_CYRILLIC_EM             &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE           &kp RU_CYRILLIC_YU           &kp RU_CYRILLIC_HARD_SIGN      &kp DELETE
-                                                     &kp ESC                        &kp RU_QUESTION              &mo 6                          &mok 2 SPACE        &kp BACKSPACE    &kp RETURN  &mok 4 SPACE        &trans                          &kp RU_COMMA                 &kp RU_DOT
+&kp TAB     &kp RU_CYRILLIC_SHORT_I    &kp RU_CYRILLIC_TSE             &kp RU_CYRILLIC_U             &kp RU_CYRILLIC_KA             &kp RU_CYRILLIC_IE                               &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA            &kp RU_CYRILLIC_SHCHA          &kp RU_CYRILLIC_ZE          &kp RU_CYRILLIC_HA
+&layer_en   &hrm LCTRL RU_CYRILLIC_EF  &hrm LEFT_ALT RU_CYRILLIC_YERU  &hrm LEFT_GUI RU_CYRILLIC_VE  &hrm LEFT_SHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                               &kp RU_CYRILLIC_ER  &hrm RIGHT_SHIFT RU_CYRILLIC_O  &hrm RIGHT_GUI RU_CYRILLIC_EL  &hrm RIGHT_ALT RU_CYRILLIC_DE  &hrm RCTRL RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp RU_DQT  &kp RU_CYRILLIC_YA         &kp RU_CYRILLIC_CHE             &kp RU_CYRILLIC_ES            &kp RU_CYRILLIC_EM             &kp RU_CYRILLIC_I                                &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE             &kp RU_CYRILLIC_YU             &kp RU_CYRILLIC_HARD_SIGN   &kp DELETE
+                                       &kp ESC                         &kp RU_QUESTION               &mo 6                          &mok 2 SPACE        &kp BACKSPACE    &kp RETURN  &mok 4 SPACE        &trans                          &kp RU_COMMA                   &kp RU_DOT
             >;
         };
 
         nav {
             bindings = <
-&kp LC(X)           &kp LC(LS(LEFT_ARROW))  &kp PAGE_DOWN    &kp UP          &kp PAGE_UP      &kp LC(LS(RIGHT_ARROW))                    &kp CLEAR        &kp N7         &kp N8     &kp N9   &kp EQUAL  &kp CAPSLOCK
-&kp LA(UP_ARROW)    &kp LC(LEFT_ARROW)      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT_ARROW)                        &kp KP_DIVIDE    &kp N4         &kp N5     &kp N6   &kp MINUS  &kp INSERT
-&kp LA(DOWN_ARROW)  &kp LA(LEFT_ARROW)      &kp HOME         &kp LGUI        &kp END          &kp LA(RIGHT_ARROW)                        &kp KP_MULTIPLY  &kp N1         &kp N2     &kp N3   &kp PLUS   &kp DELETE
+&kp LC(X)           &kp LC(LS(LEFT_ARROW))  &kp PAGE_DOWN    &kp UP          &kp PAGE_UP      &kp LC(LS(RIGHT_ARROW))                    &kp CLEAR        &kp N7         &kp N8     &kp N9   &kp KP_EQUAL  &kp CAPSLOCK
+&kp LA(UP_ARROW)    &kp LC(LEFT_ARROW)      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT_ARROW)                        &kp KP_DIVIDE    &kp N4         &kp N5     &kp N6   &kp KP_MINUS  &kp INSERT
+&kp LA(DOWN_ARROW)  &kp LA(LEFT_ARROW)      &kp HOME         &kp LGUI        &kp END          &kp LA(RIGHT_ARROW)                        &kp KP_MULTIPLY  &kp N1         &kp N2     &kp N3   &kp PLUS      &kp DELETE
                                             &kp LC(LS(TAB))  &kp LC(TAB)     &trans           &trans                   &trans    &kp N0  &mo 5            &kp BACKSPACE  &en COMMA  &en DOT
             >;
 
@@ -302,10 +302,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &kp RU_CYRILLIC_IO  &en LT         &en CARET     &en GT    &en GRAVE                     &trans    &en LBKT     &kp UNDER    &en RBKT  &trans    &trans
-&trans  &kp RU_NUMERO       &kp LPAR       &kp RU_COLON  &kp RPAR  &en AMPS                      &en HASH  &en LBRC     &kp RU_SEMI  &en RBRC  &kp EXCL  &trans
-&trans  &trans              &kp BACKSLASH  &en PIPE      &kp FSLH  &trans                        &trans    &kp PERCENT  &en TILDE    &en DLLR  &trans    &trans
-                            &trans         &trans        &en AT    &mo 5      &en SQT    &trans  &trans    &trans       &trans       &trans
+&trans  &kp RU_CYRILLIC_IO  &en LT         &en CARET     &en GT         &en GRAVE                     &trans    &en LBKT     &kp UNDER    &en RBKT  &trans    &trans
+&trans  &kp RU_NUMERO       &kp LPAR       &kp RU_COLON  &kp RPAR       &en AMPS                      &en HASH  &en LBRC     &kp RU_SEMI  &en RBRC  &kp EXCL  &trans
+&trans  &trans              &kp BACKSLASH  &en PIPE      &kp KP_DIVIDE  &trans                        &trans    &kp PERCENT  &en TILDE    &en DLLR  &trans    &trans
+                            &trans         &trans        &en AT         &mo 5      &en SQT    &trans  &trans    &trans       &trans       &trans
             >;
         };
 
