@@ -279,7 +279,7 @@
 
         nav {
             bindings = <
-&kp LC(X)           &kp LC(LS(LEFT_ARROW))  &kp PAGE_DOWN    &kp UP          &kp PAGE_UP      &kp LC(LS(RIGHT_ARROW))                    &kp CLEAR        &kp N7         &kp N8     &kp N9   &kp KP_EQUAL  &kp INSERT
+&kp LC(X)           &kp LC(LS(LEFT_ARROW))  &kp PAGE_DOWN    &kp UP          &kp PAGE_UP      &kp LC(LS(RIGHT_ARROW))                    &kp CLEAR        &kp N7         &kp N8     &kp N9   &kp EQUAL     &kp INSERT
 &kp LA(UP_ARROW)    &kp LC(LEFT_ARROW)      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT_ARROW)                        &kp KP_DIVIDE    &kp N4         &kp N5     &kp N6   &kp KP_MINUS  &kp UNDERSCORE
 &kp LA(DOWN_ARROW)  &kp LA(LEFT_ARROW)      &kp HOME         &kp LGUI        &kp END          &kp LA(RIGHT_ARROW)                        &kp KP_MULTIPLY  &kp N1         &kp N2     &kp N3   &kp PLUS      &kp DELETE
                                             &kp LC(LS(TAB))  &kp LC(TAB)     &trans           &trans                   &trans    &kp N0  &mo 5            &kp BACKSPACE  &en COMMA  &en DOT
