@@ -378,8 +378,8 @@
 };
 
 // PMW3610 accepts 200..3200 CPI in steps of 200; anything else fails sensor init.
-// With the qube dongle the sensor CPI comes from the right half firmware
-// (velvet_v3_ui_right_qube -> velvet_v3_ui.keymap), not from this file.
+// CPI is applied by the right half firmware (the sensor lives there); the
+// scalers below are applied by the central (right half, or qube dongle).
 &trackball { cpi = <1000>; };
 
 &trackball_listener {
