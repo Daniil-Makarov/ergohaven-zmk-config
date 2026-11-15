@@ -60,23 +60,212 @@
             require-prior-idle-ms = <0>;
         };
 
-        modC: modC {
+        // sym_ru symbols: plain tap types the symbol in the RU OS layout, but
+        // with Ctrl/Alt/GUI held send the same keycode as sym_en so hotkeys match.
+        ru_fslh: ru_fslh {
             compatible = "zmk,behavior-mod-morph";
-            label = "MODC";
-            bindings = <&kp RU_CYRILLIC_ES>, <&en C>;
+            label = "RU_FSLH";
+            bindings = <&kp KP_DIVIDE>, <&kp FSLH>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT|MOD_RCTL|MOD_LGUI|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
 
-        modV: modV {
+        ru_colon: ru_colon {
             compatible = "zmk,behavior-mod-morph";
-            label = "MODV";
-            bindings = <&kp RU_CYRILLIC_EM>, <&en LC(V)>;
+            label = "RU_COLON";
+            bindings = <&kp RU_COLON>, <&kp COLON>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_semi: ru_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_SEMI";
+            bindings = <&kp RU_SEMI>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        // Symbols missing from the plain RU layout. The OS uses ru(typo)
+        // (Hyprland kb_variant ",typo"), which has them on AltGr (right Alt):
+        // a plain tap sends RA(key) / RA(LS(key)). With Ctrl/Alt/GUI held the
+        // same keycode as sym_en is sent instead, so hotkeys match (Hyprland
+        // matches binds on the first, us, layout).
+        ru_lt: ru_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_LT";
+            bindings = <&kp RA(N9)>, <&kp LT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_gt: ru_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_GT";
+            bindings = <&kp RA(N0)>, <&kp GT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_caret: ru_caret {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_CARET";
+            bindings = <&kp RA(N6)>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_grave: ru_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_GRAVE";
+            bindings = <&kp RA(GRAVE)>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_tilde: ru_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_TILDE";
+            bindings = <&kp RA(LS(GRAVE))>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_lbkt: ru_lbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_LBKT";
+            bindings = <&kp RA(LBKT)>, <&kp LBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_rbkt: ru_rbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_RBKT";
+            bindings = <&kp RA(RBKT)>, <&kp RBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_lbrc: ru_lbrc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_LBRC";
+            bindings = <&kp RA(LS(LBKT))>, <&kp LBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_rbrc: ru_rbrc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_RBRC";
+            bindings = <&kp RA(LS(RBKT))>, <&kp RBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_amps: ru_amps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_AMPS";
+            bindings = <&kp RA(N7)>, <&kp AMPS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_hash: ru_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_HASH";
+            bindings = <&kp RA(N3)>, <&kp HASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_pipe: ru_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_PIPE";
+            bindings = <&kp RA(BSLH)>, <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_dllr: ru_dllr {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_DLLR";
+            bindings = <&kp RA(N4)>, <&kp DLLR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_at: ru_at {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_AT";
+            bindings = <&kp RA(N2)>, <&kp AT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_sqt: ru_sqt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_SQT";
+            bindings = <&kp RA(LS(N2))>, <&kp SQT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        // nav_ru overlay: `,` and `.` typed natively in the RU OS layout.
+        ru_comma: ru_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_COMMA";
+            bindings = <&kp RU_COMMA>, <&kp COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        ru_dot: ru_dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_DOT";
+            bindings = <&kp RU_DOT>, <&kp DOT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
 
         hrmlctrlru: hrmlctrlru {
@@ -170,24 +359,6 @@
             wait-ms = <0>;
         };
 
-        en: en {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&to_en>,
-                <&macro_press>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&to_ru>;
-
-            label = "EN";
-            wait-ms = <0>;
-            tap-ms = <30>;
-        };
-
         lctrlru: modru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -271,7 +442,7 @@
             display-name = "Ru";
             bindings = <
 &kp TAB           &kp Q         &kp W            &kp E             &kp R              &kp T                                      &kp Y         &kp U               &kp I             &kp O             &kp P              &kp LEFT_BRACKET
-&layer_en         &hrm LCTRL A  &hrm LEFT_ALT S  &hrm LEFT_GUI D   &hrm LEFT_SHIFT F  &kp G                                      &kp H         &hrm RIGHT_SHIFT J  &hrm RIGHT_GUI K  &hrm RIGHT_ALT L  &hrm RCTRL SEMI    &kp SQT
+&layer_en         &hrm LCTRL A  &hrm LEFT_ALT S  &hrm LEFT_GUI D   &hrm LEFT_SHIFT F  &kp G                                      &kp H         &hrm RIGHT_SHIFT J  &hrm RIGHT_GUI K  &hrm LEFT_ALT L   &hrm RCTRL SEMI    &kp SQT
 &kp LS(NUMBER_2)  &kp Z         &kp X            &kp C             &kp V              &kp B                                      &kp N         &kp M               &kp COMMA         &kp DOT           &kp RIGHT_BRACKET  &kp DELETE
                                 &kp ESC          &kp LS(NUMBER_7)  &mo 6              &mok 2 SPACE  &kp BACKSPACE    &kp RETURN  &mok 4 SPACE  &trans              &kp LS(SLASH)     &kp SLASH
             >;
@@ -282,7 +453,7 @@
 &kp LC(X)           &kp LC(LS(LEFT_ARROW))  &kp PAGE_DOWN    &kp UP          &kp PAGE_UP      &kp LC(LS(RIGHT_ARROW))                    &kp CLEAR        &kp N7         &kp N8     &kp N9   &kp EQUAL     &kp INSERT
 &kp LA(UP_ARROW)    &kp LC(LEFT_ARROW)      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT_ARROW)                        &kp KP_DIVIDE    &kp N4         &kp N5     &kp N6   &kp KP_MINUS  &kp UNDERSCORE
 &kp LA(DOWN_ARROW)  &kp LA(LEFT_ARROW)      &kp HOME         &kp LGUI        &kp END          &kp LA(RIGHT_ARROW)                        &kp KP_MULTIPLY  &kp N1         &kp N2     &kp N3   &kp PLUS      &kp DELETE
-                                            &kp LC(LS(TAB))  &kp LC(TAB)     &trans           &trans                   &trans    &kp N0  &mo 5            &kp BACKSPACE  &en COMMA  &en DOT
+                                            &kp LC(LS(TAB))  &kp LC(TAB)     &trans           &trans                   &trans    &kp N0  &mo 5            &kp BACKSPACE  &kp COMMA  &kp DOT
             >;
 
             display-name = "Nav";
@@ -302,10 +473,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &kp RU_CYRILLIC_IO  &en LT         &en CARET     &en GT         &en GRAVE                     &trans    &en LBKT     &kp UNDER    &en RBKT  &trans    &trans
-&trans  &kp RU_NUMERO       &kp LPAR       &kp RU_COLON  &kp RPAR       &en AMPS                      &en HASH  &en LBRC     &kp RU_SEMI  &en RBRC  &kp EXCL  &trans
-&trans  &trans              &kp BACKSLASH  &en PIPE      &kp KP_DIVIDE  &trans                        &trans    &kp PERCENT  &en TILDE    &en DLLR  &trans    &trans
-                            &trans         &trans        &en AT         &mo 5      &en SQT    &trans  &trans    &trans       &trans       &trans
+&trans  &kp RU_CYRILLIC_IO  &ru_lt         &ru_caret     &ru_gt         &ru_grave                     &trans    &ru_lbkt     &kp UNDER    &ru_rbkt  &trans    &trans
+&trans  &kp RU_NUMERO       &kp LPAR       &ru_colon     &kp RPAR       &ru_amps                      &ru_hash  &ru_lbrc     &ru_semi     &ru_rbrc  &kp EXCL  &trans
+&trans  &trans              &kp BACKSLASH  &ru_pipe      &ru_fslh       &trans                        &trans    &kp PERCENT  &ru_tilde    &ru_dllr  &trans    &trans
+                            &trans         &trans        &ru_at         &mo 5      &ru_sqt    &trans  &trans    &trans       &trans       &trans
             >;
         };
 
@@ -373,6 +544,28 @@
             >;
 
             label = "Game Nums";
+        };
+
+        // Overlay on top of nav while the ru layer is active (see
+        // conditional_layers): `,` and `.` typed natively in the RU OS layout.
+        nav_ru {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans     &trans     &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &ru_comma  &ru_dot
+            >;
+
+            display-name = "Nav";
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        nav_ru {
+            if-layers = <1 2>;
+            then-layer = <11>;
         };
     };
 };
