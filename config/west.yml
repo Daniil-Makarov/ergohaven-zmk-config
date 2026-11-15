@@ -2,10 +2,31 @@ manifest:
   remotes:
     - name: ergohaven
       url-base: https://github.com/ergohaven
+    - name: kot149
+      url-base: https://github.com/kot149
   projects:
+    # Everything is pinned to a commit, so rebuilding the same config gives the
+    # same firmware. ergohaven-zmk's own manifest tracks branches for the four
+    # modules below; a project listed here before the import wins over the
+    # imported one.
+    # To update: bump all five revisions together (branch heads: ergohaven-zmk
+    # main, zmk-pmw3610-driver eh, ergohaven-zmk-qube eh, zmk-raw-hid main,
+    # zmk-scroll-snap v1) and the workflow ref in .github/workflows/build.yml.
+    - name: zmk-pmw3610-driver
+      remote: ergohaven
+      revision: 14d39b7a6944d1014544a2382707b14724c22f49
+    - name: ergohaven-zmk-qube
+      remote: ergohaven
+      revision: 89b58d9b96598c39ad23e312d6da8e38737997a8
+    - name: zmk-raw-hid
+      remote: ergohaven
+      revision: a01b1317e7c800ed879b1015702dcb1f6870ff8a
+    - name: zmk-scroll-snap
+      remote: kot149
+      revision: 6b2dccaab2d5b99ca8b79300b9a792fefb01c42d
     - name: ergohaven-zmk
       remote: ergohaven
-      revision: main
+      revision: ebba0c8d7f2112a40413b84ff9774195ade05130
       import: config/west.yml
   self:
     path: config
