@@ -15,15 +15,13 @@
 
 
 
-        // Home-row mods. Positions: rows 0-2 = 0-11, 12-23, 24-35; bottom row
-        // 36 37 (left fingers) 38 39 40 (left thumbs) 41 42 (right thumbs)
-        // 43 (trackball, not a key) 44 45 (right fingers).
-        // A mod becomes a hold only when a key on the other hand or a thumb
-        // is pressed and released while it is held (hold-trigger-on-release),
-        // so several mods on one hand can be chorded (Super+Shift on one hand,
-        // the key on the other). Same-hand mod+key: hold the mod past
-        // tapping-term first.
-        hml: hml {
+        // Home-row mods: non-positional balanced. A mod becomes a hold as
+        // soon as any other key is pressed and released while it is held,
+        // so one-hand hotkeys (Super+S, Ctrl+C) work instantly. A plain
+        // roll (first key released first) stays a tap; a misfire is only
+        // possible on a nested roll. Positional HRM was tried and dropped:
+        // same-hand hotkeys needed the mod held past tapping-term.
+        hrm: hrm {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
@@ -31,22 +29,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
-            require-prior-idle-ms = <0>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 38 39 40 41 42>;
-            hold-trigger-on-release;
-        };
-
-        hmr: hmr {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            require-prior-idle-ms = <0>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42>;
-            hold-trigger-on-release;
         };
 
         // Must be held for a second: protects destructive keys on adj.
@@ -373,7 +355,7 @@
         en {
             bindings = <
 &kp TAB    &kp Q         &kp W        &kp E         &kp R              &kp T                                      &kp Y         &kp U               &kp I        &kp O        &kp P            &kp EXCLAMATION
-&layer_ru  &hml LCTRL A  &hml LALT S  &hml LGUI D   &hml LEFT_SHIFT F  &kp G                                      &kp H         &hmr RIGHT_SHIFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI  &kp SQT
+&layer_ru  &hrm LCTRL A  &hrm LALT S  &hrm LGUI D   &hrm LEFT_SHIFT F  &kp G                                      &kp H         &hrm RIGHT_SHIFT J  &hrm RGUI K  &hrm RALT L  &hrm RCTRL SEMI  &kp SQT
 &kp DQT    &kp Z         &kp X        &kp C         &kp V              &kp B                                      &kp N         &kp M               &kp MINUS    &kp HASH     &kp SLASH        &kp DELETE
                          &kp ESC      &kp QUESTION  &mo 6              &mok 2 SPACE  &kp BACKSPACE    &kp RETURN  &mok 3 SPACE  &trans              &kp COMMA    &kp DOT
             >;
@@ -385,7 +367,7 @@
             display-name = "Ru";
             bindings = <
 &kp TAB           &kp Q         &kp W            &kp E             &kp R              &kp T                                      &kp Y         &kp U               &kp I             &kp O             &kp P              &ru_ha
-&layer_en         &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_GUI D   &hml LEFT_SHIFT F  &kp G                                      &kp H         &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr LEFT_ALT L   &hmr RCTRL SEMI    &kp SQT
+&layer_en         &hrm LCTRL A  &hrm LEFT_ALT S  &hrm LEFT_GUI D   &hrm LEFT_SHIFT F  &kp G                                      &kp H         &hrm RIGHT_SHIFT J  &hrm RIGHT_GUI K  &hrm LEFT_ALT L   &hrm RCTRL SEMI    &kp SQT
 &ru_dqt           &kp Z         &kp X            &kp C             &kp V              &kp B                                      &kp N         &kp M               &ru_be            &ru_yu            &ru_hard           &kp DELETE
                                 &kp ESC          &ru_qmark         &mo 6              &mok 2 SPACE  &kp BACKSPACE    &kp RETURN  &mok 4 SPACE  &trans              &ru_comma         &ru_dot
             >;
