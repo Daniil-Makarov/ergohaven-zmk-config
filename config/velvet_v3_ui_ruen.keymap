@@ -50,13 +50,15 @@
             flavor = "tap-preferred";
         };
 
+        // Space layer-taps. No quick-tap-ms: with it, pressing the same space
+        // key again soon after tapping it is forced to a tap, so "type a
+        // space, then hold it for nav" sent space + base-layer letters.
         mok: mok {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
             flavor = "balanced";
             require-prior-idle-ms = <0>;
         };
